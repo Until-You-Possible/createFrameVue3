@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b5bdf87-d402-42cc-8725-1c9175609145" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/framework/src/doc/sum.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/doc/think-sum.md" afterDir="false" />
+    <list default="true" id="3b5bdf87-d402-42cc-8725-1c9175609145" name="Default Changelist" comment="1: 整理基本">
+      <change afterPath="$PROJECT_DIR$/framework/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/styles/_animation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/styles/_mixin.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/styles/_reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/styles/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/styles/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/vue.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/views/About.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/framework/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/views/Home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +48,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1629956996574</updated>
-      <workItem from="1629956997893" duration="3357000" />
+      <workItem from="1629956997893" duration="7651000" />
     </task>
+    <task id="LOCAL-00001" summary="1: 整理基本">
+      <created>1629961282518</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629961282518</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -65,5 +76,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="1: 整理基本" />
+    <option name="LAST_COMMIT_MESSAGE" value="1: 整理基本" />
   </component>
 </project>

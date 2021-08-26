@@ -2,6 +2,7 @@
 
   <div class="home-container">
     this is home
+    <a href="#">这里是a标签</a>
   </div>
 
 </template>
