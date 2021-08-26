@@ -2,31 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b5bdf87-d402-42cc-8725-1c9175609145" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/createFrameVue3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/.browserslistrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/jest.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/components/HelloWorld.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/router/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/shims-vue.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/store/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/views/About.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/views/Home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/tests/unit/example.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/doc/sum.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/doc/think-sum.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/views/About.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/views/Home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1629956996574</updated>
-      <workItem from="1629956997893" duration="1202000" />
+      <workItem from="1629956997893" duration="3357000" />
     </task>
     <servers />
   </component>

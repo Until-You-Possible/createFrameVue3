@@ -1,15 +1,17 @@
 <template>
-  <div class="home">
-    this is home;
+
+  <div class="home-container">
+    this is home
   </div>
+
 </template>
 
 <script lang="ts">
+
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Home',
-  components: {
-  }
+  name: 'home'
 })
+
 </script>
