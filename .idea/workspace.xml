@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b5bdf87-d402-42cc-8725-1c9175609145" name="Default Changelist" comment="1: 继续整理结构&#10;2：测试一些基本的样式ok 基本定义的类能够加上">
-      <change afterPath="$PROJECT_DIR$/framework/src/components/Button/buttonTypes.ts" afterDir="false" />
+    <list default="true" id="3b5bdf87-d402-42cc-8725-1c9175609145" name="Default Changelist" comment="1: 继续整理结构&#10;2：定义了button的基本形式和初步样式">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/src/components/Button/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/components/Button/button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/components/Button/buttonTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/components/Button/buttonTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/src/components/Button/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/components/Button/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1629956996574</updated>
-      <workItem from="1629956997893" duration="24897000" />
+      <workItem from="1629956997893" duration="30784000" />
     </task>
     <task id="LOCAL-00001" summary="1: 整理基本">
       <created>1629961282518</created>
@@ -65,7 +64,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629971260837</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1: 继续整理结构&#10;2：定义了button的基本形式和初步样式">
+      <created>1630045750003</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1630045750003</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +93,7 @@
     <MESSAGE value="1: 整理基本" />
     <MESSAGE value="1: 整理结构&#10;2：增加部分css，css这部分不过多研究，都是现有的拿过来用的&#10;3：增加一些基本的配置" />
     <MESSAGE value="1: 继续整理结构&#10;2：测试一些基本的样式ok 基本定义的类能够加上" />
-    <option name="LAST_COMMIT_MESSAGE" value="1: 继续整理结构&#10;2：测试一些基本的样式ok 基本定义的类能够加上" />
+    <MESSAGE value="1: 继续整理结构&#10;2：定义了button的基本形式和初步样式" />
+    <option name="LAST_COMMIT_MESSAGE" value="1: 继续整理结构&#10;2：定义了button的基本形式和初步样式" />
   </component>
 </project>

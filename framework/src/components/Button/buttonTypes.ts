@@ -3,7 +3,7 @@
 class ButtonAllProps {
 
   // 定义size
-  buttonSizes: string[] = ["small", "default", "large"];
+  buttonSizes: string[] = ["small", "medium", "large"];
   // 定义基本类型
   buttonTypes: string[] = ["link","default", "href", "dashed", "primary", "warning"];
   // 定义外观类型

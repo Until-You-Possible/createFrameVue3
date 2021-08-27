@@ -3,7 +3,10 @@
   <div class="button-index-container">
      <div class="tips">这里用于button组件的测试</div>
      <div class="components-container">
-       <Button type="default" size="small" text="First Button" />
+       <Button  type="default" size="small" text="default" />
+       <Button  type="primary" size="small" text="primary" />
+       <Button  type="dashed" size="small" text="dashed" />
+       <Button  type="warning" size="small" text="warning" />
      </div>
   </div>
 

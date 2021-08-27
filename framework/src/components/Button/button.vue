@@ -2,11 +2,7 @@
 
   <div class="button-container">
     <div class="content">
-      <div class="btn btn-default">basic</div>
-      <div class="btn btn-primary">primary</div>
-      <div class="btn btn-warning">warning</div>
-      <div class="btn btn-link">link</div>
-      <div class="btn btn-dashed">dashed</div>
+      <div :class="classesRef">{{typeRef}}</div>
     </div>
   </div>
 
@@ -16,7 +12,10 @@
 <script lang="ts">
 
 
-import { defineComponent, PropType } from 'vue';
+import { defineComponent, PropType, ref, toRefs,
+  onMounted, onUnmounted,
+  computed
+} from 'vue';
 import ButtonAllProps from "@/components/Button/buttonTypes";
 
 const buttonAllProps = new ButtonAllProps();
@@ -43,7 +42,34 @@ export default defineComponent({
     text: String
   },
   setup (props, context) {
+    const { type, size, text } = props;
     console.log("props", props);
+    if (!text) return;
+    const typeRef = ref<string | undefined>("primary") || "";
+    const sizeRef = ref<string | undefined>("medium");
+    const textRef = ref<string | undefined>("");
+    const classesRef = ref<string | undefined>("btn");
+    onMounted(() => {
+      typeRef.value = type;
+      sizeRef.value = size;
+      textRef.value = text;
+    });
+
+    const classes = computed(() => {
+      const prefixName = "btn";
+      let sizeClass = prefixName + "-" + sizeRef.value;
+      let typeClass = prefixName + "-" +  typeRef.value;
+      classesRef.value = "btn" + " "+ sizeClass + " " + typeClass;
+    });
+    // classesRef.value = classes;
+    console.log("classes", classes.value);
+
+    return {
+      typeRef,
+      sizeRef,
+      textRef,
+      classesRef
+    }
   }
 });
 
@@ -67,6 +93,7 @@ export default defineComponent({
   padding: $btn-padding-y $btn-padding-x;
   width: 100px;
   border-radius: 4px;
+  border: 1px solid #ccc;
 }
 .btn-default {
   border: 1px solid #ccc;
