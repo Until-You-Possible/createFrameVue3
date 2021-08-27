@@ -1,12 +1,10 @@
 <template>
 
   <div class="button-index-container">
-     <div class="tips">这里用于button组件的开发和测试</div>
-    <button class="btn bth-default">button</button>
-    <button class="btn bth-primary btn-lg">button</button>
-    <button class="btn btn-danger">button</button>
-    <button disabled class="btn bth-primary">button</button>
-    <button class="btn btn-link">button</button>
+     <div class="tips">这里用于button组件的测试</div>
+     <div class="components-container">
+       <Button type="default" size="small" text="First Button" />
+     </div>
   </div>
 
 </template>
@@ -14,10 +12,14 @@
 
 <script lang="ts">
 
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
+import Button from "@/components/Button/button.vue";
 
 export default defineComponent({
-  name: 'buttonIndex'
+  name: 'buttonIndex',
+  components: {
+    Button
+  }
 });
 
 
@@ -25,7 +27,7 @@ export default defineComponent({
 
 
 <style lang="scss">
-@import "./style.scss";
+
 .button-index-container {
   .tips {
     width: 100%;
