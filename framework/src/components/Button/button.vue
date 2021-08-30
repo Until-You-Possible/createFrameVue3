@@ -2,7 +2,7 @@
 
   <div class="button-container">
     <div class="content">
-      <div :class="classesRef">{{typeRef}}</div>
+      <div :class="classesRef">{{textRef}}</div>
     </div>
   </div>
 
@@ -13,13 +13,11 @@
 
 
 import { defineComponent, PropType, ref, toRefs,
-  onMounted, onUnmounted,
+  onMounted,
+  onUnmounted,
   computed
 } from 'vue';
-import ButtonAllProps from "@/components/Button/buttonTypes";
-
-const buttonAllProps = new ButtonAllProps();
-console.log("buttonAllProps", buttonAllProps);
+import HandleButtonClass from "@/components/Button/buttonTypes";
 // 枚举基本的一些属性
 // 基本尺寸
 type ButtonProps = {
@@ -33,6 +31,7 @@ type ButtonProps = {
 
 
 
+
 export default defineComponent({
   name: "button",
   inheritAttrs: false,
@@ -43,30 +42,17 @@ export default defineComponent({
   },
   setup (props, context) {
     const { type, size, text } = props;
-    console.log("props", props);
     if (!text) return;
-    const typeRef = ref<string | undefined>("primary") || "";
-    const sizeRef = ref<string | undefined>("medium");
     const textRef = ref<string | undefined>("");
-    const classesRef = ref<string | undefined>("btn");
+    const classesRef = ref<string | undefined>("");
     onMounted(() => {
-      typeRef.value = type;
-      sizeRef.value = size;
-      textRef.value = text;
+      textRef.value = props.text;
+      const handleButtonClass  = new HandleButtonClass(props);
+      classesRef.value = handleButtonClass.makeALlClasses();
     });
 
-    const classes = computed(() => {
-      const prefixName = "btn";
-      let sizeClass = prefixName + "-" + sizeRef.value;
-      let typeClass = prefixName + "-" +  typeRef.value;
-      classesRef.value = "btn" + " "+ sizeClass + " " + typeClass;
-    });
-    // classesRef.value = classes;
-    console.log("classes", classes.value);
 
     return {
-      typeRef,
-      sizeRef,
       textRef,
       classesRef
     }
@@ -80,6 +66,8 @@ export default defineComponent({
 
 .button-container {
   margin-top: 30px;
+  display: inline-block;
+  margin-right: 10px;
   .content {
     padding-left: 30px;
     padding-right: 30px;

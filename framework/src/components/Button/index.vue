@@ -5,8 +5,9 @@
      <div class="components-container">
        <Button  type="default" size="small" text="default" />
        <Button  type="primary" size="small" text="primary" />
-       <Button  type="dashed" size="small" text="dashed" />
+       <Button  type="dashed"  size="small" text="dashed" />
        <Button  type="warning" size="small" text="warning" />
+       <Button  type="link" size="small" text="link" />
      </div>
   </div>
 
