@@ -5,14 +5,12 @@ class HandleButtonClass {
   type;
   size;
   shape;
-  disabled;
   commonClass = "btn";
 
   constructor(props: any) {
     this.type = props.type;
     this.size = props.size;
     this.shape = props.shape;
-    this.disabled = props.disabled;
   }
 
   // 定义size

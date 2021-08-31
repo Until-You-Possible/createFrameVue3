@@ -38,18 +38,23 @@ export default defineComponent({
   props: {
     type: String,
     size: String,
-    text: String
+    text: String,
+    disabled: String
   },
   setup (props, context) {
-    const { type, size, text } = props;
+    console.log("props", props);
+    const { type, size, text, disabled } = props;
     if (!text) return;
     const textRef = ref<string | undefined>("");
     const classesRef = ref<string | undefined>("");
     onMounted(() => {
       textRef.value = props.text;
       const handleButtonClass  = new HandleButtonClass(props);
-      classesRef.value = handleButtonClass.makeALlClasses();
-      console.log("classesRef", classesRef);
+      if (disabled) {
+        classesRef.value = "btn btn-disabled";
+      } else {
+        classesRef.value = handleButtonClass.makeALlClasses();
+      }
     });
 
 
@@ -117,10 +122,10 @@ export default defineComponent({
   font-size:  $btn-font-size;
   padding: $btn-padding-y-sm $btn-padding-x-sm;
 }
-.btn-disbaled {
+.btn-disabled {
   pointer-events: none;
   background: #ccc;
-  cursor: not-allowed;
+  cursor: not-allowed !important;
 }
 
 </style>

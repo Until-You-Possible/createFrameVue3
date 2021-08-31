@@ -10,7 +10,7 @@
        <Button  type="warning" size="large" text="large warning" />
        <Button  type="primary" size="large" text="large primary" />
        <Button  type="dashed"  size="large" text="large dashed" />
-       <Button  type="primary" disbaled="disbaled"  size="large" text="large disbaled" />
+       <Button  type="primary" disabled="disabled"  size="large" text="large disbaled" />
      </div>
   </div>
 
