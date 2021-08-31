@@ -1,7 +1,7 @@
 <template>
 
   <div class="button-container">
-    <div class="content">
+    <div @click="buttonClick" class="content">
       <div :class="classesRef">{{textRef}}</div>
     </div>
   </div>
@@ -41,9 +41,10 @@ export default defineComponent({
     text: String,
     disabled: String
   },
+
   setup (props, context) {
-    console.log("props", props);
-    const { type, size, text, disabled } = props;
+
+    const { text, disabled } = props;
     if (!text) return;
     const textRef = ref<string | undefined>("");
     const classesRef = ref<string | undefined>("");
@@ -56,11 +57,20 @@ export default defineComponent({
         classesRef.value = handleButtonClass.makeALlClasses();
       }
     });
+    // 点击事件
+    const buttonClick = (event: Event) => {
+      if (disabled) {
+        event.preventDefault();
+        return false;
+      }
+      context.emit("click", event);
+    }
 
 
     return {
       textRef,
-      classesRef
+      classesRef,
+      buttonClick
     }
   }
 });

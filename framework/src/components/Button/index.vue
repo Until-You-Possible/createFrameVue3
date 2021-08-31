@@ -3,14 +3,14 @@
   <div class="button-index-container">
      <div class="tips">这里用于button组件的测试</div>
      <div class="components-container">
-       <Button  type="default" size="small" text="default" />
-       <Button  type="primary" size="small" text="primary" />
-       <Button  type="dashed"  size="small" text="dashed" />
-       <Button  type="warning" size="small" text="warning" />
-       <Button  type="warning" size="large" text="large warning" />
-       <Button  type="primary" size="large" text="large primary" />
-       <Button  type="dashed"  size="large" text="large dashed" />
-       <Button  type="primary" disabled="disabled"  size="large" text="large disbaled" />
+       <Button  type="default" size="small" text="default" @click="handleClick"/>
+       <Button  type="primary" size="small" text="primary" @click="handleClick('primary')" />
+       <Button  type="dashed"  size="small" text="dashed"  @click="handleClick('dashed')"/>
+       <Button  type="warning" size="small" text="warning" @click="handleClick('warning')" />
+       <Button  type="warning" size="large" text="large warning" @click="handleClick('large warning')" />
+       <Button  type="primary" size="large" text="large primary"  @click="handleClick('large primary')"/>
+       <Button  type="dashed"  size="large" text="large dashed" @click="handleClick('large dashed')" />
+       <Button  type="primary" disabled="disabled"  size="large" text="large disbaled"  @click="handleClick('large disbaled')"/>
      </div>
   </div>
 
@@ -26,6 +26,14 @@ export default defineComponent({
   name: 'buttonIndex',
   components: {
     Button
+  },
+  setup () {
+    const handleClick = (event: Event) => {
+      console.log("item", event);
+    }
+    return {
+      handleClick
+    }
   }
 });
 
