@@ -5,12 +5,14 @@ class HandleButtonClass {
   type;
   size;
   shape;
+  disabled;
   commonClass = "btn";
 
   constructor(props: any) {
     this.type = props.type;
-    this.size = props.type;
+    this.size = props.size;
     this.shape = props.shape;
+    this.disabled = props.disabled;
   }
 
   // 定义size
@@ -43,21 +45,27 @@ class HandleButtonClass {
   }
   getSize () {
     if (!this.size) {
-      return "medium";
+      return "";
     }
     if (this.size) {
-      if (this.buttonTypes.indexOf(this.size) === -1) {
+      if (this.buttonSizes.indexOf(this.size) === -1) {
         console.log("请输入正确的的按钮尺寸关键字");
-        return "medium";
+        return "btn";
+      }
+      const currentSize = this.buttonSizes.find(v => v === this.size);
+      if (currentSize === "small") {
+        return "sm"
+      }
+      if (currentSize === "large") {
+        return "lg"
       }
     }
-    return this.buttonSizes.find(v => v === this.size);
   }
   makeALlClasses () {
     let classes = "";
     let typeClass = this.commonClass + "-" + this.type;
-    let sizeClass = this.commonClass + "-" + this.size;
-    classes = this.commonClass + this.addBank(typeClass);
+    let sizeClass = this.commonClass + "-" + this.getSize();
+    classes = this.commonClass + this.addBank(typeClass) + this.addBank(sizeClass);
     return classes;
   }
   addBank(item: string) {

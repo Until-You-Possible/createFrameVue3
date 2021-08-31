@@ -7,7 +7,10 @@
        <Button  type="primary" size="small" text="primary" />
        <Button  type="dashed"  size="small" text="dashed" />
        <Button  type="warning" size="small" text="warning" />
-       <Button  type="link" size="small" text="link" />
+       <Button  type="warning" size="large" text="large warning" />
+       <Button  type="primary" size="large" text="large primary" />
+       <Button  type="dashed"  size="large" text="large dashed" />
+       <Button  type="primary" disbaled="disbaled"  size="large" text="large disbaled" />
      </div>
   </div>
 

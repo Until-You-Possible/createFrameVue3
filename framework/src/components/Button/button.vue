@@ -49,6 +49,7 @@ export default defineComponent({
       textRef.value = props.text;
       const handleButtonClass  = new HandleButtonClass(props);
       classesRef.value = handleButtonClass.makeALlClasses();
+      console.log("classesRef", classesRef);
     });
 
 
@@ -79,7 +80,7 @@ export default defineComponent({
 .btn {
   font-size:  $btn-font-size;
   padding: $btn-padding-y $btn-padding-x;
-  width: 100px;
+  min-width: 100px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
@@ -105,6 +106,21 @@ export default defineComponent({
   border-style: dashed;
   border-color: #0d6efd;
   color: #0d6efd;
+}
+
+.btn-lg {
+  font-size:  $btn-font-size;
+  padding: $btn-padding-y-lg  $btn-padding-x-lg;
+}
+
+.btn-sm {
+  font-size:  $btn-font-size;
+  padding: $btn-padding-y-sm $btn-padding-x-sm;
+}
+.btn-disbaled {
+  pointer-events: none;
+  background: #ccc;
+  cursor: not-allowed;
 }
 
 </style>
