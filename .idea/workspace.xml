@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b5bdf87-d402-42cc-8725-1c9175609145" name="Default Changelist" comment="1: 继续整理结构&#10;2：完成一个最简单的button">
-      <change afterPath="$PROJECT_DIR$/framework/src/components/Checkbox/checkbox.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/components/Checkbox/checkbox.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/components/Checkbox/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/thinking.md" afterDir="false" />
+    <list default="true" id="3b5bdf87-d402-42cc-8725-1c9175609145" name="Default Changelist" comment="1: 增加checkbox的基本样式和基本结构">
+      <change afterPath="$PROJECT_DIR$/framework/src/util/isMobile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/components/Button/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/components/Button/button.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/components/Button/buttonTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/components/Button/buttonTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/components/Button/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/components/Button/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/components/Checkbox/checkbox.scss" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/components/Checkbox/checkbox.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/components/Checkbox/checkbox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/components/Checkbox/checkbox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/thinking.md" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/thinking.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +44,7 @@
       <updated>1629956996574</updated>
       <workItem from="1629956997893" duration="47097000" />
       <workItem from="1630385549127" duration="12936000" />
-      <workItem from="1630476610144" duration="7021000" />
+      <workItem from="1630476610144" duration="11861000" />
     </task>
     <task id="LOCAL-00001" summary="1: 整理基本">
       <created>1629961282518</created>
@@ -85,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630051910102</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1: 增加checkbox的基本样式和基本结构">
+      <created>1630483903348</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1630483903348</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +113,7 @@
     <MESSAGE value="1: 继续整理结构&#10;2：测试一些基本的样式ok 基本定义的类能够加上" />
     <MESSAGE value="1: 继续整理结构&#10;2：定义了button的基本形式和初步样式" />
     <MESSAGE value="1: 继续整理结构&#10;2：完成一个最简单的button" />
-    <option name="LAST_COMMIT_MESSAGE" value="1: 继续整理结构&#10;2：完成一个最简单的button" />
+    <MESSAGE value="1: 增加checkbox的基本样式和基本结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="1: 增加checkbox的基本样式和基本结构" />
   </component>
 </project>
