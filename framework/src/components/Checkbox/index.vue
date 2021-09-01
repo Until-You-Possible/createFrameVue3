@@ -3,7 +3,7 @@
   <div class="index-container">
     <div class="tips">这里用于checkbox组件的测试</div>
     <div>
-      <Checkbox></Checkbox>
+      <Checkbox :checkboxObject="checkboxObject">选中按钮</Checkbox>
     </div>
   </div>
 
@@ -12,15 +12,23 @@
 
 <script lang="ts">
 
-import { defineComponent }  from "vue";
+
+import { defineComponent, ref, reactive } from "vue";
 import Checkbox from "@/components/Checkbox/checkbox.vue";
+import { CheckboxProps } from "./checkbox.vue";
 export default defineComponent({
   name: "testCheckbox",
   components: {
     Checkbox
   },
   setup () {
-
+    const checkboxObject = reactive<CheckboxProps>({
+      checked: true,
+      disabled: true
+    });
+    return {
+      checkboxObject
+    }
   }
 });
 
