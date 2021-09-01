@@ -1,6 +1,6 @@
 <template>
 
-  <div class="button-index-container">
+  <div class="index-container">
      <div class="tips">这里用于button组件的测试</div>
      <div class="components-container">
        <Button  type="default" size="small" text="default" @click="handleClick"/>
@@ -10,7 +10,7 @@
        <Button  type="warning" size="large" text="large warning" @click="handleClick('large warning')" />
        <Button  type="primary" size="large" text="large primary"  @click="handleClick('large primary')"/>
        <Button  type="dashed"  size="large" text="large dashed" @click="handleClick('large dashed')" />
-       <Button  type="primary" disabled="disabled"  size="large" text="large disbaled"  @click="handleClick('large disbaled')"/>
+       <Button  type="primary" disabled="disabled"  size="large" text="large disabled"  @click="handleClick('large disabled')"/>
      </div>
   </div>
 
@@ -28,8 +28,9 @@ export default defineComponent({
     Button
   },
   setup () {
-    const handleClick = (event: Event) => {
+    const handleClick = (event: any, params: string) => {
       console.log("item", event);
+      console.log("params", params);
     }
     return {
       handleClick
@@ -43,7 +44,7 @@ export default defineComponent({
 
 <style lang="scss">
 
-.button-index-container {
+.index-container {
   .tips {
     width: 100%;
     height: 50px;

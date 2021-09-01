@@ -5,12 +5,16 @@ class HandleButtonClass {
   type;
   size;
   shape;
+  text;
+  disabled;
   commonClass = "btn";
 
   constructor(props: any) {
     this.type = props.type;
     this.size = props.size;
     this.shape = props.shape;
+    this.text = props.text;
+    this.disabled = props.disabled;
   }
 
   // 定义size
@@ -58,6 +62,18 @@ class HandleButtonClass {
         return "lg"
       }
     }
+  }
+  getText () {
+    if (!this.text) {
+      return "按钮";
+    }
+    return this.text;
+  }
+  getDisabled () {
+    if (!this.disabled || this.disabled != "disabled") {
+      return ""
+    }
+    return  this.commonClass + " " + this.commonClass + "-" + this.disabled;
   }
   makeALlClasses () {
     let classes = "";

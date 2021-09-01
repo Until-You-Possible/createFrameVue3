@@ -15,17 +15,17 @@
 import { defineComponent, PropType, ref, toRefs,
   onMounted,
   onUnmounted,
-  computed
+  computed,
+  Text
 } from 'vue';
 import HandleButtonClass from "@/components/Button/buttonTypes";
 // 枚举基本的一些属性
 // 基本尺寸
-type ButtonProps = {
+export interface ButtonProps  {
   size? : string,
   type? : string,
   text? : string,
-  href? : string,
-  disabled? : boolean,
+  disabled? : string,
   click?: () => void
 }
 
@@ -36,23 +36,22 @@ export default defineComponent({
   name: "button",
   inheritAttrs: false,
   props: {
-    type: String,
     size: String,
+    type: String,
     text: String,
     disabled: String
   },
-
   setup (props, context) {
-
-    const { text, disabled } = props;
-    if (!text) return;
+    console.log("props", props);
+    // const { disabled } = props;
+    let disabled: Boolean;
     const textRef = ref<string | undefined>("");
     const classesRef = ref<string | undefined>("");
     onMounted(() => {
-      textRef.value = props.text;
       const handleButtonClass  = new HandleButtonClass(props);
+      textRef.value = handleButtonClass.getText();
       if (disabled) {
-        classesRef.value = "btn btn-disabled";
+        classesRef.value = handleButtonClass.getDisabled();
       } else {
         classesRef.value = handleButtonClass.makeALlClasses();
       }
@@ -63,10 +62,8 @@ export default defineComponent({
         event.preventDefault();
         return false;
       }
-      context.emit("click", event);
+      context.emit("click", event, "234");
     }
-
-
     return {
       textRef,
       classesRef,
