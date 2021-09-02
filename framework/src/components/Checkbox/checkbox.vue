@@ -3,17 +3,7 @@
   <div class="g-checkbox-container">
     <div>
       <label class="g-checkbox-wrapper">
-        <span class="g-checkbox" :class="{'g-checkbox-checked': checkboxRef}">
-          <input :disabled="disabledRef" @change="checkboxChange" v-model="checkboxRef" type="checkbox" class="g-checkbox-input">
-          <span class="g-checkbox-inner"></span>
-        </span>
-        <span class="g-checkbox-text">
-          <slot></slot>
-        </span>
-      </label>
-
-      <label class="g-checkbox-wrapper">
-        <span class="g-checkbox g-checkbox-disabled g-checkbox-checked">
+        <span class="g-checkbox" :class="classString">
           <input :disabled="disabledRef" @change="checkboxChange" v-model="checkboxRef" type="checkbox" class="g-checkbox-input">
           <span class="g-checkbox-inner"></span>
         </span>
@@ -38,7 +28,8 @@
 // - 默认禁用行为
 // - 再非disabled的情况下 得到一个布尔值
 
-import { defineComponent, ref, onMounted, watch, PropType } from "vue";
+import { defineComponent, PropType, ref, watch, onMounted } from "vue";
+import classNames from "@/util/classes";
 
 export interface CheckboxProps {
   checked: boolean,
@@ -55,22 +46,34 @@ export default defineComponent({
     }
   },
   setup (props, context) {
-    console.log("props", props.checkboxObject);
     const checkboxRef = ref<Boolean>(false);
     const disabledRef = ref<Boolean | undefined>(false);
+    const classString = ref<String>("");
     checkboxRef.value = props.checkboxObject.checked;
     disabledRef.value = props.checkboxObject.disabled;
-    const checkboxChange = (event: Event) => {
-      console.log("event", event);
-    }
-    watch(checkboxRef ,(newValue, oldValue) => {
-      console.log("newValue", newValue);
-      console.log("oldValue", oldValue);
+    onMounted(() => {
+      classString.value =  classNames({
+          ["g-checkbox-disabled"]: disabledRef.value,
+          ["g-checkbox-checked"]: checkboxRef.value
+        });
     });
+    const checkboxChange = (event: Event) => {
+      if (disabledRef.value) {
+        event.preventDefault();
+        return false;
+      }
+      // 处理选中和非选中的状态
+      checkboxRef.value = !!checkboxRef.value;
+      classString.value =  classNames({
+        ["g-checkbox-checked"]: !!checkboxRef.value
+      });
+      context.emit("handleCheckboxEvent", event, checkboxRef.value);
+    }
 
     return {
       checkboxRef,
       disabledRef,
+      classString,
       checkboxChange
     }
   }
