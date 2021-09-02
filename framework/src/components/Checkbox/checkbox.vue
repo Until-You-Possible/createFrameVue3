@@ -32,7 +32,7 @@ export default defineComponent({
       console.log("oldValue", oldValue);
     });
 
-    return {b
+    return {
       checkboxRef,
       checkboxChange
     }
