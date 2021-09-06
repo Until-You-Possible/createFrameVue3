@@ -3,9 +3,9 @@
   <div class="index-container">
     <div class="tips">这里用于checkbox组件的测试</div>
     <div>
-<!--      <Checkbox :checkboxObject="checkboxObject1">选中禁用</Checkbox>-->
+      <Checkbox :checkboxObject="checkboxObject1">选中禁用</Checkbox>
       <Checkbox :checkboxObject="checkboxObject2">选中按钮</Checkbox>
-<!--      <Checkbox :checkboxObject="checkboxObject3">禁用未选</Checkbox>-->
+      <Checkbox :checkboxObject="checkboxObject3">禁用未选</Checkbox>
       <Checkbox :checkboxObject="checkboxObject4" @handleCheckboxEvent="handleCheckboxEvent">普通按钮</Checkbox>
     </div>
   </div>

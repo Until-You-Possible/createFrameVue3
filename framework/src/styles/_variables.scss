@@ -245,20 +245,20 @@ $input-disabled-bg:                     $gray-200 !default;
 $input-disabled-border-color:           null !default;
 
 $input-color:                           $gray-700 !default;
-$input-border-color:                    $gray-400 !default;
+//$input-border-color:                    $gray-400 !default;
 $input-border-width:                    $border-width !default;
-$input-box-shadow:                      $box-shadow-inset !default;
+//$input-box-shadow:                      $box-shadow-inset !default;
 
 $input-border-radius:                   $border-radius !default;
 $input-border-radius-lg:                $border-radius-lg !default;
 $input-border-radius-sm:                $border-radius-sm !default;
 
 $input-focus-bg:                        $input-bg !default;
-$input-focus-border-color:              lighten($primary, 25%) !default;
+//$input-focus-border-color:              lighten($primary, 25%) !default;
 $input-focus-width:                     .2rem !default;
 $input-focus-color:                     $input-color !default;
-$input-focus-shadow-color:              rgba($primary, .25) !default;
-$input-focus-box-shadow:                0 0 0 $input-focus-width $input-focus-shadow-color !default;
+//$input-focus-shadow-color:              rgba($primary, .25) !default;
+//$input-focus-box-shadow:                0 0 0 $input-focus-width $input-focus-shadow-color !default;
 
 $input-placeholder-color:               $gray-600 !default;
 $input-plaintext-color:                 $body-color !default;
@@ -270,7 +270,7 @@ $input-transition:                      border-color .3s ease-in-out, box-shadow
 
 $input-group-addon-color:               $input-color !default;
 $input-group-addon-bg:                  $gray-200 !default;
-$input-group-addon-border-color:        $input-border-color !default;
+//$input-group-addon-border-color:        $input-border-color !default;
 
 // Progress bars
 
