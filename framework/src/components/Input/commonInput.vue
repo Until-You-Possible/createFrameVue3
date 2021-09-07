@@ -53,8 +53,6 @@ export default defineComponent({
     }
   },
   setup (props, context) {
-    console.log("context", context.slots);
-    console.log("context", context.attrs);
     let { inputData } = props;
     let classesString = ref<String>("")
     const handleClasses = () => {

@@ -10,7 +10,7 @@
   list-style: none;
   position: relative;
   display: inline-block;
-  width: 100%;
+  //width: 100%;
   padding: 4px 11px;
   color: rgba(0,0,0,.85);
   font-size: 14px;
@@ -21,6 +21,7 @@
   border-radius: 2px;
   transition: all .3s;
   outline: #0d6efd;
+  width: 240px;
   &:focus {
   border: 1px solid #17a2b8;
 }
