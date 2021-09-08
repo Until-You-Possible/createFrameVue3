@@ -2,9 +2,11 @@
 import { defineComponent, onMounted, PropType, ref } from 'vue';
 import PropTypes from "@/util/vueTypes";
 import classes from "@/util/classes";
-import InputProps  from "@/components/Input/commonInput.vue";
+// import InputProps  from "@/components/Input/commonInput.vue";
 import "./input.scss";
 
+
+//
 // export interface InputProps {
 //   defaultValue: PropTypes.string,
 //   type: PropTypes.string,
@@ -29,7 +31,7 @@ import "./input.scss";
 const BaseInput = defineComponent({
   props: {
     inputData: {
-      type: Object as PropType<typeof InputProps>,
+      type: Object,
       default: () => {}
     }
   },

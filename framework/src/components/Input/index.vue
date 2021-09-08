@@ -8,28 +8,39 @@
         @handleInputEvent="handleInputEvent"
         @handleBlurEvent="handleBlurEvent"
         :input-data="InputData" />
+
+<!--      search learn-->
+<!--      <SearchInput></SearchInput>-->
+      <BasicInput></BasicInput>
     </div>
   </div>
 </template>
 
 <script lang="tsx">
-import { defineComponent, reactive, ref, toRefs } from "vue";
+import { defineComponent, reactive, ref, toRefs, onMounted } from "vue";
 import commonInput from "@/components/Input/commonInput.vue";
-import InputProps from "./commonInput";
-import BaseInput from "./BaseInput"
-
+// import InputProps from "./commonInput";
+import BaseInput from "./BaseInput";
+import SearchInput from "./searchInput"
+import BasicInput from "@/components/Input/BasicInput";
 
 export default defineComponent({
   name: "InputTest",
   components: {
     commonInput,
-    BaseInput
+    BaseInput,
+    BasicInput,
+    SearchInput
   },
   setup () {
-    const InputData = reactive<InputProps>({
+    onMounted(() => {
+      console.log("BasicInput", BasicInput);
+    })
+    const InputData = reactive({
       defaultValue: "",
       placeholder: "pls input the text",
       type: "text",
+      width: true,
       disabled: false
     });
 

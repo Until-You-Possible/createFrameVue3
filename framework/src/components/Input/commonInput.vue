@@ -16,40 +16,34 @@
 <script lang="ts">
 
 import { defineComponent, PropType, onMounted, ref} from "vue";
-import {
-  HomeOutlined,
-  SettingFilled,
-  SmileOutlined,
-  SyncOutlined,
-  LoadingOutlined,
-} from '@ant-design/icons-vue';
 import PropTypes from "@/util/vueTypes";
 import classes from "@/util/classes";
 
-export interface InputProps {
-  defaultValue: PropTypes.string,
-  type: PropTypes.string,
-  placeholder: PropTypes.string,
-  disabled: PropTypes.looseBool,
-  readonly: PropTypes.looseBool,
-  maxlength: PropTypes.number,
-  onPressEnter: PropTypes.func,
-  onKeydown: PropTypes.func,
-  onKeyup: PropTypes.func,
-  onFocus: PropTypes.func,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func,
-  onInput: PropTypes.func,
-  autofocus: PropTypes.looseBool,
-  allowClear: PropTypes.looseBool
-}
+// export interface InputProps {
+//   defaultValue: PropTypes.string,
+//   type: PropTypes.string,
+//   placeholder: PropTypes.string,
+//   disabled: PropTypes.looseBool,
+//   readonly: PropTypes.looseBool,
+//   maxlength: PropTypes.number,
+//   onPressEnter: PropTypes.func,
+//   onKeydown: PropTypes.func,
+//   onKeyup: PropTypes.func,
+//   onFocus: PropTypes.func,
+//   onBlur: PropTypes.func,
+//   onChange: PropTypes.func,
+//   onInput: PropTypes.func,
+//   autofocus: PropTypes.looseBool,
+//   allowClear: PropTypes.looseBool
+// }
 
 
 export default defineComponent({
   name:  "testCommonInput",
   props: {
     inputData: {
-      type: Object as PropType<InputProps>
+      type: Object,
+      default: () => {}
     }
   },
   setup (props, context) {
